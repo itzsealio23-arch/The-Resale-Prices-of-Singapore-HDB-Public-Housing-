@@ -14,7 +14,7 @@ To discover which Singaporean towns have the highest and lowest average HDB resa
 
 To visualize these economic trends using data visualization libraries.
 
-🛠️ Technologies Used
+Technologies Used
 
 **Python 3**
 
