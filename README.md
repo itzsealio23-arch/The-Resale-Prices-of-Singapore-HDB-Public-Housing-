@@ -34,7 +34,7 @@ If you would like to run this code on your own machine, follow these steps:
 
 Clone the repository:
 
-git clone [https://github.com/YOUR-USERNAME/hdb-resale-analysis.git](https://github.com/YOUR-USERNAME/hdb-resale-analysis.git)
+git clone [https://github.com/YOUR-USERNAME/hdb-resale-analysis.git](https://github.com/itzsealio23-arch/hdb-resale-analysis.git)
 
 
 Install the required libraries:
