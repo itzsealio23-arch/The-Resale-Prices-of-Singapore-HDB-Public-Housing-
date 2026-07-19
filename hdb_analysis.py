@@ -37,6 +37,44 @@ print(df.head())
 print("\n\nSeeing the Data Description:")
 print(df.describe())
 #The month column in the describe command shows NaN for standard deviation because, I converted the month column into Date/Time format during our cleaning phase, which then confuses Pandas, however we only need the min and the max for the month column
+
+# Now that I have finished looking at the basics of analyzing the data its time to move onto the more advanced analyzing
+
+#Data Manipulation: Find average price by town
+print("\n\nCalculating average prices by town:")
+# Group the towns, calculate the mean resale price, and sort from highest to lowest
+avg_price_by_town = df.groupby('town')['resale_price'].mean().sort_values(ascending=False)
+    
+print("\nTop 5 Most Expensive Towns (Average Price):")
+print(avg_price_by_town.head())
+
+#Calculate price per square meter
+#This standardizes the price so large houses don't bias our view of a town's value
+df['price_per_sqm'] = df['resale_price']/df['floor_area_sqm']
+#Now we have created the price per sqm variable
+
+#Calculate overall averages for comparison
+avg_total_price = df['resale_price'].mean()
+avg_sqm_price = df['price_per_sqm'].mean()
+print(f"Overall Average Resale Price: S${avg_total_price:,.2f}")
+print(f"Overall Average Price/Sqm: S${avg_sqm_price:,.2f}/sqm\n")
+
+#Grouping by Flat Type: See how pricing scales with room sizes
+print("Average Prices by Flat Type:")
+avg_price_by_type = df.groupby('flat_type')['resale_price'].mean().sort_values()
+for ftype, price in avg_price_by_type.items():
+    print(f"{ftype}: S${price:,.2f}")
+    
+#Filtering Data: I'm gonna isolate 4 room flats (Singapore's most popular type)
+#and find which towns have the most expensive 4-room flats.
+four_room_df = df[df['flat_type'] == '4 ROOM']
+avg_4room_by_town = four_room_df.groupby('town')['resale_price'].mean().sort_values(ascending=False)
+print("\n\nTop 5 Towns for 4-Room Flats:")
+print(avg_4room_by_town.head())
+
+#Group towns by average overall price and average price per sqm
+avg_price_by_town = df.groupby('town')['resale_price'].mean().sort_values(ascending=False)
+avg_sqm_by_town = df.groupby('town')['price_per_sqm'].mean().loc[avg_price_by_town.index]
   
   
 
