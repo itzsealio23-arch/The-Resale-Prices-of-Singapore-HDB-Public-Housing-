@@ -1,4 +1,4 @@
-Singapore HDB Resale Price Analysis
+Singapore HDB Resale Price Analysis and Prediction
 
 **Project Description & Overview:**
 
