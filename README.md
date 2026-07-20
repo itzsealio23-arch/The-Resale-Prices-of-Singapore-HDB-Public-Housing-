@@ -6,7 +6,7 @@ Public housing plays an important role in the real estate market in Singapore, w
 
 This project is an analysis of the resale market of HDB flats in Singapore using data. Utilizing data analysis capabilities in Python, the repository accepts information from transactions at Data.gov.sg to gain insights. The objective of this project is to find out what are the answers to the following questions: What towns have the largest premiums? What influence has the floor area on the price?
 
-I decided to build this project because HDB flats are such a huge part of life in Singapore, and I was genuinely curious why some towns like Bishan are so much more expensive than others. I wanted to use Python to find out. Since I have a idea in the future to move to Singapore, this project helps me figure out where to move into.
+I decided to build this project because HDB flats are such a huge part of life in Singapore, and I was genuinely curious why some towns like Bishan are so much more expensive than others. I wanted to use Python to find out. Since I have a idea in the future to move to Singapore, this project helps me and others figure out where to move into.
 
 Link For Data = https://data.gov.sg
 
