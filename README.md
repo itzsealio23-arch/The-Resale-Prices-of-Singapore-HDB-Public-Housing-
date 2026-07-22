@@ -4,9 +4,10 @@ Singapore HDB Resale Price Analysis
 
 Public housing plays an important role in the real estate market in Singapore, where more than 80% of its inhabitants live in HDB (Housing & Development Board) flats. Buying an HDB resale flat can be one of the biggest financial accomplishments for many Singaporeans. Nonetheless, resale flat prices may vary greatly according to the town where the property is located, type of flat, floor area, and the year when the property was constructed.
 
-This project is an analysis of the resale market of HDB flats in Singapore using data. Utilizing data analysis capabilities in Python, the repository accepts information from transactions at Data.gov.sg to gain insights. The objective of this project is to find out what are the answers to the following questions: What towns have the largest premiums? What influence has the floor area on the price?
+This project is an analysis of the resale market of HDB flats in Singapore using data. Utilizing data analysis capabilities in Python, the repository accepts information from transactions at Data.gov.sg to gain insights.
 
-I decided to build this project because HDB flats are such a huge part of life in Singapore, and I was genuinely curious why some towns like Bishan are so much more expensive than others. I wanted to use Python to find out. Since I have a idea in the future to move to Singapore, this project helps me and others figure out where to move into.
+**THE PROBLEM**
+I decided to build this project because HDB flats are such a huge part of life in Singapore, and I was genuinely curious why some towns like Bishan are so much more expensive than others. Since Singapore has 80% of the resident population living in HDB, purchasing a home is a major financial milestone. The problem is information overload and affordability fear. How would a young buyer know if they are overpaying for a flat? Which neighbhorhoods offer the most space for the lowest price. This project aims to solve this by providing, a data drive analysis for helping young buyers get the best flats, while not overpaying.
 
 Link For Data = https://data.gov.sg
 
