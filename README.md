@@ -1,54 +1,63 @@
-Singapore HDB Resale Price Analysis
+Singapore HDB Resale Price Analysis: Finding Value in the Market
 
-**Project Description & Overview:**
+**My Passion & Motivation**
 
-Public housing plays an important role in the real estate market in Singapore, where more than 80% of its inhabitants live in HDB (Housing & Development Board) flats. Buying an HDB resale flat can be one of the biggest financial accomplishments for many Singaporeans. Nonetheless, resale flat prices may vary greatly according to the town where the property is located, type of flat, floor area, and the year when the property was constructed.
+As I look toward university and my future career, housing affordability is one of the most frequent topics of debate I hear among young Singaporeans. I am deeply interested in economics and urban planning, and I wanted to stop just reading the news about high housing prices and actually explore the data that influences housing affordability.
 
-This project is an analysis of the resale market of HDB flats in Singapore using data. Utilizing data analysis capabilities in Python, the repository accepts information from transactions at Data.gov.sg to gain insights.
+I built this project to combine my passion for data science with a real-world issue, with a goal to find out where the true value lies in our housing market.
 
-**THE PROBLEM:**
+**The Process of Data Science**
 
-I decided to build this project because HDB flats are such a huge part of life in Singapore, and I was genuinely curious why some towns like Bishan are so much more expensive than others. Since Singapore has 80% of the resident population living in HDB, purchasing a home is a major financial milestone. The problem is information overload and affordability fear. How would a young buyer know if they are overpaying for a flat? Which neighbhorhoods offer the most space for the lowest price. This project aims to solve this by providing, a data drive analysis for helping young buyers get the best flats, while not overpaying.
+To ensure a rigorous and structured investigation, I built this project using the core 5-step data science lifecycle:
 
-Link For Data = https://data.gov.sg
+1. Ask a Question
 
-**Objectives**
+The Problem: With record-breaking million-dollar flats making headlines, first-time homebuyers often feel fear by "affordability anxiety."
 
-To clean and manipulate large real-world datasets using Python.
+The Question: How can a young buyer know if they are overpaying for a flat, and which neighborhoods offer the most space for the lowest price?
 
-To discover which Singaporean towns have the highest and lowest average HDB resale prices.
+2. Data Collection
 
-To visualize these economic trends using data visualization libraries.
+The Source: I sourced the official Resale Flat Prices dataset provided by the Housing & Development Board (HDB) via the Singapore government's open data portal (Data.gov.sg).
 
-Technologies Used
+The Scope: The dataset contains over 170,000 real-world transaction records spanning from 2017 to the present day. 
 
-**Python 3**
+3. Exploration and Cleaning
 
-Pandas: Used for data manipulation, grouping, and calculating averages.
+Data Scrubbing: I used the Pandas library in Python to identify and drop duplicate records. I also converted text-based 'month' columns into proper Datetime formats for accurate time-series tracking.
 
-Matplotlib: Used for generating data visualizations and charts.
+Standard prices can be misleading due to varying flat sizes. To fix this, I coded a new feature—Price per Square Meter ($/sqm)—to standardize the data and fairly compare different towns.
 
-**Data Source**
+4. Analysis
 
-The dataset used in this project is the official Resale Flat Prices dataset, provided by the Housing & Development Board (HDB) via Data.gov.sg.
+Statistical Grouping: By aggregating the data by town and flat type, I uncovered the "Space vs. Location Trade-off." Mature estates command a massive premium for location, but non-mature estates offer significantly more living space for a fraction of the cost.
 
-**How to Run This Project**
+Machine Learning: I developed a Multiple Linear Regression model using Scikit-Learn. The AI was trained on an 80/20 train/test split to learn the mathematical relationship between a flat's size (floor_area_sqm), its age (lease_commence_date), and its final resale_price.
+
+5. Present Results
+
+Visualizations: I used Matplotlib to generate a dual-chart visualization (saved in this repository) that allows users to instantly compare absolute total costs versus space-efficiency values across all Singaporean towns.
+
+Interactive Application: I packaged my machine learning model into a First-Time Buyer Price Predictor (hdb_price_predictor.py). Users can input their desired flat size and age, and the trained AI will present an estimated fair-market price to help them avoid overpaying.
+
+🚀 How to Run This Project
 
 If you would like to run this code on your own machine, follow these steps:
 
 Clone the repository:
 
-git clone [https://github.com/itzsealio23-arch/The-Resale-Prices-of-Singapore-HDB-Public-Housing-.git](https://github.com/itzsealio23-arch/The-Resale-Prices-of-Singapore-HDB-Public-Housing-.git)
+git clone [https://github.com/YOUR-USERNAME/hdb-resale-analysis.git](https://github.com/YOUR-USERNAME/hdb-resale-analysis.git)
 
 
 Install the required libraries:
 
-pip install -r requirements.txt
+pip install pandas scikit-learn matplotlib
 
 
-Run the script:
+Run the Data Analysis Script:
 
 python hdb_analysis.py
+
 
 
 **Key Findings**
