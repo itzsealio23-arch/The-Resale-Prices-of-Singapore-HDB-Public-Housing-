@@ -84,9 +84,7 @@ The expensive flats (Executive and Multi-Generation flats) are characterized by 
 
 Being the most popular form of residential housing in Singapore, the 4-room housing data will provide a good basis to measure the cost of living across regions. From the analysis in the python file, it is evident that the five most expensive towns to buy a 4-room flat surpass the national average and hence are competitive markets.
 
-Further Steps in This Project:
-
-Analysis of Spatial Distance: Incorporate geographic data containing the locations of MRT stations. Through this, one can determine the exact distance of travel on foot from each flat to the closest MRT station.
+**Further Steps in This Project**:
 
 Predictive Modeling: Apply machine learning techniques (e.g., Multiple Linear Regression or Random Forest Regressor using scikit-learn) for forecasting future resale prices of HDB flats considering the past data parameters such as town, floor area, storey height, and remaining lease year.
 
