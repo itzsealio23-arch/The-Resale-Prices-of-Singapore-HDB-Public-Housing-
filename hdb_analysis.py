@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 #Makes the graphs aligned so it is clean to read
 %matplotlib inline
 
+#------------DATA COLLECTION--------------#
 # 1. Creating a data frame from Singapores biggest database (data.gov.sg)
 print("Singapore HDB Resale Price Analysis")
 df=pd.read_csv("hdb_prices.csv")
@@ -27,7 +28,7 @@ df['month'] = pd.to_datetime(df['month'])
 df.to_csv('hdb_prices_CLEANED.csv', index=False)
 
 
-#------------Analyzing Data--------------#
+#------------Exploratory Data Analysis (EDA)--------------#
 
 #Prints the first few lines of the database to have an overview of the dataset
 print("\n\nSeeing first five lines in the database:")
@@ -40,6 +41,7 @@ print(df.describe())
 
 # Now that I have finished looking at the basics of analyzing the data its time to move onto the more advanced analyzing
 
+#------------Analysis--------------#
 #Data Manipulation: Find average price by town
 print("\n\nCalculating average prices by town:")
 # Group the towns, calculate the mean resale price, and sort from highest to lowest
